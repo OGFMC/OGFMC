@@ -1,0 +1,387 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="E:\Projects\OG\Images\ico og.ico" type="image/x-icon">
+    <style>
+        /* Reset default browser styles */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Basic styling */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: whitesmoke;
+        }
+
+        header {
+            background-color: white;
+            color: black;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-title img {
+            width: 100px; /* Adjust the width as needed */
+            height: 100px; /* Adjust the height as needed */
+            margin-right: 10px; /* Adjust the spacing as needed */
+        }
+
+        .logo-title h1 {
+            font-size: 24px; /* Adjust the font size as needed */
+            color: black; /* Text color */
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px; /* Adjust the spacing as needed */
+        }
+        nav{
+            justify-content: space-between;
+        }
+        nav a {
+            padding: 14px 16px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        nav a:hover{
+            background-color: black;
+            color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 5px;
+            transform:scale(0.1);
+        }
+
+        section {
+            padding: 40px;
+            min-height: 100vh;
+            
+        }
+
+        .hero {
+            text-align: center;
+        }
+
+        .about-content, .projects-content, .Connect-content, .contact-content {
+            
+            padding: 20px;
+            margin-bottom: 30px;
+           
+            
+        }
+        
+        footer {
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Responsive design using media queries */
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .logo-title {
+                margin-bottom: 10px; /* Adjust the spacing as needed */
+            }
+
+            nav ul {
+                margin-top: 10px;
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin-right: 0;
+                margin-bottom: 10px; /* Adjust the spacing as needed */
+            }
+        }
+        #home {
+            color: white;
+            background-image: url("E:/Projects/OG/Images/Projector.jpg"); /* Adjust the path and image file name */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #about {
+            background-image: url("E:/Projects/OG/Images/Reel.png"); /* Adjust the path and image file name */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #gallery{
+            background-image: url("E:/Projects/OG/Images/og gang.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #projects{
+            background-image: url("E:/Projects/OG/Images/cam.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+        #projects a{
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 14px 16px;
+            font-weight: bold;
+            text-align: center;
+            }
+        #projects a:hover{
+            background-color: white;
+            color: black;
+         
+        }
+        #connect{
+            background-image: url("E:/Projects/OG/Images/blue.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            text-align: right;
+            
+        }
+        #connect a{
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border: white;
+            padding: 14px 16px;
+            font-weight: bold;
+            
+            
+        }
+        #connect a:hover{
+            background-color: white;
+            color: black;
+            text-align: center;
+        }
+        #contact{
+            background-image: url("E:/Projects/OG/Images/pexels-cup-of-couple-6177641.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #contact a{
+            display: inline-block;
+            text-decoration: none;
+            background-color: black;
+            border-radius: 5px;
+            color: white;
+            border: black;
+            padding: 14px 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+        #contact a:hover{
+            background-color: white;
+            color: black;
+            
+
+        }
+        .contact-content{
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            
+        }
+        .gallery-content .image-container {
+            display: block;
+            text-align: center;
+        }
+        .gallery-content .image-container img {
+            max-width: 40%; /* Adjust the width as needed; 48% allows some space between images */
+            border-radius: 15px;
+        }
+        .background1 {
+            background-image: url("E:/Projects/OG/Images/Projector.jpg");
+            transition: background-image 0.5s ease; /* Add a transition for background-image */
+        }
+        .background2 {
+            background-image: url("E:/Projects/OG/Images/Reel.png");
+    
+            transition: background-image 0.5s ease; /* Add a transition for background-image */
+        }
+
+        /* Responsive design using media queries */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .logo-title {
+        margin-bottom: 10px; /* Adjust the spacing as needed */
+    }
+
+    nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px; /* Adjust the spacing as needed */
+    }
+
+    /* Mobile-specific styles for other sections */
+    section {
+        padding: 20px; /* Adjust the padding as needed */
+    }
+
+    /* Adjust styles for smaller screens */
+    .hero h1 {
+        font-size: 20px; /* Adjust the font size as needed */
+    }
+
+    /* Modify other styles as necessary for mobile view */
+
+    /* Example: Reduce image max-width in the gallery for better mobile display */
+    .gallery-content .image-container img {
+        max-width: 100%; /* Adjust the width as needed for mobile screens */
+    }
+}
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.parallax-content {
+    padding: 40px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for better readability */
+    position: relative;
+    z-index: 1; /* Ensure the content is above the background */
+}
+
+    </style>
+    <title>OGFMC</title>
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="E:\Projects\OG\Images\OG Transperent.png" alt="OG Film Making Club Logo">
+            <h1>OG Film Making Club</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#projects">Our Projects</a></li>
+                <li><a href="#connect">Connect</a></li>
+                <li><a href="#contact">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="background1">
+        <div class="hero">
+            <h1>OG Film Making Club</h1>
+            <p>Lights. Camera. Action!</p>
+        </div>
+    </section>
+
+    <section id="about" class="background1 parallax">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>A thriving community dedicated to the art of storytelling through film. We believe that people and their stories hold a profound fascination, and it is this very connection that fuels our love for films. Our club is a hub for like-minded individuals who are captivated by the transformative impact of sharing stories. Join us as we celebrate the magic of cinema and empower filmmakers to bring their visions to life.
+                Love OGFMC.</p>
+                
+        </div>
+    </section>
+    <section id="gallery" class="background2 parallax">
+        <div class="gallery-content">
+            <h2>Gallery</h2>
+        <div class="image-container">
+            <img src="E:\Projects\OG\Images\Gp01.jpg" alt="OG gang" > <br><br>
+            <img src="E:\Projects\OG\Images\gp02.jpg" alt="OG Gang">
+        </div>
+
+    </div>
+    </section>
+
+    <section id="projects" class="background3 parallax">
+        <div class="projects-content">
+            <h2>Our Projects</h2>
+            <br><p>Watch our OG Content Now!</p><br>
+            <a href="https://www.youtube.com/watch?v=qElfgwDjvM4" target="_blank">Kaiku</a>
+            <a href="https://www.youtube.com/watch?v=tAlkSCKf26s" target="_blank">18th Note</a>
+        </div>
+    </section>
+
+    <section id="connect" class="background4 parallax">
+        <div class="Connect-content">
+            <h2 align="left">Connect for the moment we created...</h2>
+            <br>
+            <a href="https://www.instagram.com/ogfmclub/" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/@ogfmc" target="_blank">YouTube</a>
+            <a href="https://www.linkedin.com/company/og-film-making-club" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <section id="contact" class="background5 parallax">
+    <div class="contact-content">
+        <div>
+            <h2>Join us, because friends make the best crew</h2><br>
+            <a href="mailto:ogfmclub2022@gmail.com?subject=Request%20to%20join" target="_blank">Click Here</a>
+        </div>
+        <div align="right">
+            <h2>Write a story to us...</h2><br>
+            <a href="mailto:ogfmclub2022@gmail.com?subject=Story%20of" target="_blank">Click Here</a>
+        </div>
+    </div>
+    </section>
+   
+    <footer>
+        <div class="social-icons">
+            
+        </div>
+        <p>&copy; 2023 Original Gangsters of Film Making Club</p>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+    
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+    
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth' // This enables smooth scrolling
+                    });
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
